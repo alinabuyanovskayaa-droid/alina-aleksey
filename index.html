@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,88 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Алексей & Алина | Свадебное приглашение</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
-        .contacts-block {
-        background: #ffffff;
-        padding: clamp(3rem, 8vw, 5rem) 1.5rem;
-        border-bottom: 1px solid #eeeeee;
-        text-align: center;
-    }
-
-    .contacts-container {
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    .contacts-title {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
-        font-weight: 400;
-        letter-spacing: 0.1em;
-        color: #111111;
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
-    }
-
-    .contacts-text {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: #666666;
-        margin-bottom: 2.5rem;
-        font-style: italic; /* Делает текст более мягким и личным */
-    }
-
-    .contact-buttons {
-        display: flex;
-        justify-content: center;
-        gap: clamp(1rem, 4vw, 3rem);
-        flex-wrap: wrap;
-    }
-
-    .contact-btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-width: 200px;
-        padding: 1.5rem;
-        border: 0.5px solid #cccccc; /* Очень тонкая, изящная линия */
-        text-decoration: none;
-        color: #111111;
-        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        background: #ffffff;
-    }
-
-    .contact-btn:hover {
-        border-color: #111111;
-        background: #fafafa;
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    }
-
-    .btn-label {
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 8px;
-        color: #888888;
-    }
-
-    .btn-name {
-        font-size: 1.4rem;
-        font-family: 'Cormorant Garamond', serif;
-        font-weight: 400;
-        letter-spacing: 1px;
-    }
-
-    /* Адаптивность для узких экранов телефонов */
-    @media (max-width: 480px) {
-        .contact-btn {
-            min-width: 100%; /* На маленьких телефонах кнопки одна под другой */
-            padding: 1.2rem;
-        }
-    }
+        /* ===== Базовые сбросы ===== */
         * {
             margin: 0;
             padding: 0;
@@ -106,98 +29,35 @@
             width: 100%;
         }
 
-       .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /* Изменяем центровку: текст теперь будет прижат к верху */
-    justify-content: flex-start; 
-    align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    
-    /* Чистое фото без эффектов */
-    background-image: url('IMG_6307.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* Отступ сверху, чтобы текст не прилипал к краю экрана */
-    padding-top: 80px; 
-}
-
-/* Стили для имен */
-.names {
-    color: #ffffff; /* Или ваш акцентный цвет */
-    font-size: 3.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-    z-index: 10;
-
-    /* Тень, которая делает текст читаемым на любом фото, не затемняя само фото */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 
-                 0px 0px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Стили для подзаголовка */
-.hero-sub {
-    color: #ffffff;
-    font-size: 1.2rem;
-    letter-spacing: 5px;
-    z-index: 10;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-}
-
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 60px; /* Чуть меньше отступ на телефонах */
-        /* На мобильных фото часто лучше смотрится с центровкой по лицам */
-        background-position: center 20%; 
-    }
-
-    .names {
-        font-size: 2.2rem;
-        padding: 0 20px;
-    }
-
-    .hero-sub {
-        font-size: 0.9rem;
-    }
-}
-
-        .deco-line {
-            position: absolute;
-            width: 2px;
-            height: 80px;
-            background: #dddddd;
-            top: 20%;
-            right: 10%;
-            z-index: 1;
-        }
-        .deco-dots {
-            position: absolute;
-            bottom: 20%;
-            left: 8%;
-            width: 60px;
-            height: 60px;
-            background: radial-gradient(circle, #dddddd 2px, transparent 2px);
-            background-size: 12px 12px;
-            opacity: 0.4;
-            z-index: 1;
-        }
-        @media (max-width: 768px) {
-            .hero::after, .deco-line, .deco-dots { display: none; }
+        /* ===== Hero ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: url('IMG_6307.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding-top: 80px;
         }
 
+        /* Специфичные стили для текста в hero (белый цвет и тень) */
+        .hero .names,
+        .hero .hero-sub {
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0px 0px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Общие стили для имён (используются только в hero) */
         .names {
             font-size: clamp(2.2rem, 8vw, 4rem);
             font-weight: 400;
             letter-spacing: 0.02em;
-            color: #111111;
             margin-bottom: 1rem;
             text-transform: uppercase;
             position: relative;
@@ -209,10 +69,23 @@
             font-weight: 400;
             letter-spacing: 0.2rem;
             text-transform: uppercase;
-            color: #555555;
             margin-top: 0.25rem;
             position: relative;
             z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 60px;
+                background-position: center 20%;
+            }
+            .names {
+                font-size: 2.2rem;
+                padding: 0 20px;
+            }
+            .hero-sub {
+                font-size: 0.9rem;
+            }
         }
 
         .scroll-down {
@@ -252,7 +125,15 @@
             animation: bounceSoft 2s infinite ease-in-out;
         }
 
-        /* Guests Section */
+        /* ===== Общие стили для секций ===== */
+        .small-divider {
+            width: 50px;
+            height: 1px;
+            background: #cccccc;
+            margin: 1rem auto 1.2rem;
+        }
+
+        /* ===== Гости (календарь) ===== */
         .guests-block {
             background-color: #ffffff;
             padding: 4rem 1.5rem;
@@ -281,7 +162,6 @@
             margin: 0 auto 2rem auto;
         }
 
-        /* Calendar */
         .calendar-wrapper {
             background: #ffffff;
             border: 1px solid #dddddd;
@@ -362,7 +242,7 @@
             .calendar-day { font-size: 0.75rem; }
         }
 
-        /* Location Section */
+        /* ===== Локация ===== */
         .location-block {
             background: #ffffff;
             padding: 4rem 1.5rem;
@@ -443,7 +323,7 @@
             transform: translateY(-2px);
         }
 
-        /* Timeline Section */
+        /* ===== Тайминг ===== */
         .timeline-block {
             background: #ffffff;
             padding: 4rem 1.5rem;
@@ -556,7 +436,7 @@
             .timeline-item { margin-bottom: 1.8rem; }
         }
 
-        /* Dress Code Section */
+        /* ===== Дресс-код ===== */
         .dresscode-block {
             background: #ffffff;
             padding: 4rem 1.5rem;
@@ -604,7 +484,72 @@
         .blue { background: #c2ddf8; }
         .burgundi { background: #39040e; }
 
-        /* Wishes Section */
+        /* ===== Слайдер ===== */
+        .slider-container {
+            position: relative;
+            max-width: 700px;
+            margin: 2rem auto 0;
+            overflow: hidden;
+            border-radius: 28px;
+        }
+        .slider-track {
+            display: flex;
+            transition: transform 0.4s ease;
+        }
+        .slide {
+            flex: 0 0 100%;
+            text-align: center;
+        }
+        .slide img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+            z-index: 10;
+        }
+        .slider-btn:hover {
+            background: #000000;
+        }
+        .btn-left { left: 10px; }
+        .btn-right { right: 10px; }
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #cccccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .dot.active {
+            background: #111111;
+            transform: scale(1.2);
+        }
+
+        /* ===== Пожелания ===== */
         .wishes-block {
             background: #ffffff;
             padding: 4rem 1.5rem;
@@ -636,7 +581,87 @@
             margin-top: 0;
         }
 
-        /* Presence Section */
+        /* ===== Контакты ===== */
+        .contacts-block {
+            background: #ffffff;
+            padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+            border-bottom: 1px solid #eeeeee;
+            text-align: center;
+        }
+
+        .contacts-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contacts-title {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: #111111;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .contacts-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #666666;
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 4vw, 3rem);
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+            padding: 1.5rem;
+            border: 0.5px solid #cccccc;
+            text-decoration: none;
+            color: #111111;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: #ffffff;
+        }
+
+        .contact-btn:hover {
+            border-color: #111111;
+            background: #fafafa;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .btn-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            color: #888888;
+        }
+
+        .btn-name {
+            font-size: 1.4rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 480px) {
+            .contact-btn {
+                min-width: 100%;
+                padding: 1.2rem;
+            }
+        }
+
+        /* ===== Присутствие (форма) ===== */
         .presence-block {
             background: #ffffff;
             padding: 4rem 1.5rem;
@@ -752,74 +777,10 @@
             font-weight: 500;
             color: #111;
             letter-spacing: 0.02em;
+            display: none; /* скрыто до отправки */
         }
 
-        /* Slider */
-        .slider-container {
-            position: relative;
-            max-width: 700px;
-            margin: 2rem auto 0;
-            overflow: hidden;
-            border-radius: 28px;
-        }
-        .slider-track {
-            display: flex;
-            transition: transform 0.4s ease;
-        }
-        .slide {
-            flex: 0 0 100%;
-            text-align: center;
-        }
-        .slide img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            border-radius: 24px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        }
-        .slider-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.2s;
-            z-index: 10;
-        }
-        .slider-btn:hover {
-            background: #000000;
-        }
-        .btn-left { left: 10px; }
-        .btn-right { right: 10px; }
-        .slider-dots {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 1rem;
-        }
-        .dot {
-            width: 8px;
-            height: 8px;
-            background: #cccccc;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .dot.active {
-            background: #111111;
-            transform: scale(1.2);
-        }
-
-        /* Animation */
+        /* ===== Анимации ===== */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -830,13 +791,7 @@
             transform: translateY(0);
         }
 
-        .small-divider {
-            width: 50px;
-            height: 1px;
-            background: #cccccc;
-            margin: 1rem auto 1.2rem;
-        }
-
+        /* ===== Footer ===== */
         footer {
             background: #ffffff;
             text-align: center;
@@ -850,8 +805,6 @@
 <body>
 
     <section class="hero" id="hero-section">
-        <div class="deco-line"></div>
-        <div class="deco-dots"></div>
         <div class="names">ALEXEY & ALINA</div>
         <div class="hero-sub">ПРИГЛАШАЮТ НА СВАДЬБУ</div>
         <div class="scroll-down" id="scrollArrow">
@@ -881,14 +834,13 @@
         </div>
     </section>
 
-    <!-- Обновленный блок Локация: без иконок и даты, с фото здания -->
     <section class="location-block fade-up">
         <div class="location-container">
             <div class="location-card">
                 <h3>ЛОКАЦИЯ</h3>
                 <div class="small-divider"></div>
                 <div class="location-address">
-                     «Zlata Villa»<br>
+                    «Zlata Villa»<br>
                     Минская область, Логойский район, д.Силичи<br>
                 </div>
                 <div class="location-image">
@@ -914,7 +866,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-time">16:00</div>
-                    <div class="timeline-event">Cвадебная церемония</div>
+                    <div class="timeline-event">Свадебная церемония</div> <!-- исправлено "C" на "С" -->
                 </div>
             </div>
             <div class="timeline-item">
@@ -929,7 +881,7 @@
                     <div class="timeline-event">Завершение вечера</div>
                 </div>
             </div>
-            </div>
+            <!-- лишний </div> удалён -->
         </div>
     </section>
 
@@ -945,19 +897,16 @@
                 <div class="color-swatch"><div class="color-square blue"></div></div>
                 <div class="color-swatch"><div class="color-square burgundi"></div></div>
             </div>
-            
 
             <div class="slider-container">
                 <button class="slider-btn btn-left" id="prevSlide">‹</button>
                 <div class="slider-track" id="sliderTrack">
-                    <div class="slide"><img src="brown.jpg" ></div>
-                     <div class="slide"><img src="brown_man.jpg" ></div>
-                    <div class="slide"><img src="blue.jpg" ></div>
-                   <div class="slide"><img src="blue_man.jpg" ></div>
-                    <div class="slide"><img src="burgundi.jpg" ></div>
-                     <div class="slide"><img src="burgundi_man.jpg" ></div>
-
-
+                    <div class="slide"><img src="brown.jpg" alt="Коричневый женский образ"></div>
+                    <div class="slide"><img src="brown_man.jpg" alt="Коричневый мужской образ"></div>
+                    <div class="slide"><img src="blue.jpg" alt="Голубой женский образ"></div>
+                    <div class="slide"><img src="blue_man.jpg" alt="Голубой мужской образ"></div>
+                    <div class="slide"><img src="burgundi.jpg" alt="Бордовый женский образ"></div>
+                    <div class="slide"><img src="burgundi_man.jpg" alt="Бордовый мужской образ"></div>
                 </div>
                 <button class="slider-btn btn-right" id="nextSlide">›</button>
             </div>
@@ -980,28 +929,26 @@
     </section>
 
     <section class="contacts-block fade-up">
-    <div class="contacts-container">
-        <h2 class="contacts-title">КОНТАКТЫ</h2>
-        <div class="small-divider"></div>
-        <p class="contacts-text">
-            Если вы хотите подготовить для нас творческий подарок, 
-            сделать сюрприз или у вас просто остались вопросы — 
-            пожалуйста, напишите нам! Мы всегда на связи.
-        </p>
-        
-        <div class="contact-buttons">
-            
-              <a href="https://t.me/ник_жениха" target="_blank" class="contact-btn">
-                <span class="btn-label">Жених</span>
-                <span class="btn-name">Алексей</span>
-            </a>
-           <a href="https://web.telegram.org/a/#532920604" target="_blank" class="contact-btn">
-                <span class="btn-label">Невеста</span>
-                <span class="btn-name">Алина</span>
-            </a>
+        <div class="contacts-container">
+            <h2 class="contacts-title">КОНТАКТЫ</h2>
+            <div class="small-divider"></div>
+            <p class="contacts-text">
+                Если вы хотите подготовить для нас творческий подарок, 
+                сделать сюрприз или у вас просто остались вопросы — 
+                пожалуйста, напишите нам! Мы всегда на связи.
+            </p>
+            <div class="contact-buttons">
+                <a href="https://t.me/ник_жениха" target="_blank" class="contact-btn">
+                    <span class="btn-label">Жених</span>
+                    <span class="btn-name">Алексей</span>
+                </a>
+                <a href="https://t.me/smolskaya765" target="_blank" class="contact-btn">
+                    <span class="btn-label">Невеста</span>
+                    <span class="btn-name">Алина</span>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section class="presence-block fade-up">
         <div class="presence-container">
@@ -1009,7 +956,7 @@
             <div class="small-divider"></div>
             <p class="presence-sub">Пожалуйста, ответьте на несколько вопросов, это поможет нам в организации торжества.</p>
             
-            <form id="presenceForm">
+            <form id="presenceForm" action="https://formspree.io/f/xaqlyaow" method="POST">
                 <div class="form-group">
                     <label for="fullname">Фамилия и имя *</label>
                     <input type="text" id="fullname" name="fullname" required placeholder="Иванова Анна">
@@ -1047,7 +994,7 @@
                 
                 <button type="submit" class="submit-btn">Отправить</button>
             </form>
-            <div class="soon-message">До скорой встречи!</div>
+            <div class="soon-message" id="soonMessage">До скорой встречи!</div>
         </div>
     </section>
 
@@ -1092,12 +1039,14 @@
                 });
             }
 
+            // Скролл по стрелке
             const scrollArrow = document.getElementById('scrollArrow');
             const guestsBlock = document.getElementById('guests-section');
             if (scrollArrow && guestsBlock) {
                 scrollArrow.addEventListener('click', () => guestsBlock.scrollIntoView({ behavior: 'smooth', block: 'start' }));
             }
 
+            // Анимация появления
             const animated = document.querySelectorAll('.fade-up');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -1151,43 +1100,83 @@
                 });
             }
 
-            // Форма присутствия
+            // Форма
             const form = document.getElementById('presenceForm');
+            const soonMessage = document.getElementById('soonMessage');
             const customCheckbox = document.getElementById('customDrinkCheckbox');
             const customField = document.getElementById('customDrinkField');
+            const customInput = document.getElementById('customDrink');
 
-            customCheckbox.addEventListener('change', function() {
-                if (this.checked) {
-                    customField.classList.add('active');
-                } else {
-                    customField.classList.remove('active');
-                }
-            });
+            // Скрываем сообщение до отправки
+            soonMessage.style.display = 'none';
 
-            form.addEventListener('submit', function(e) {
+            // Показать/скрыть поле "Свой вариант"
+            if (customCheckbox) {
+                customCheckbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        customField.style.display = 'block';
+                        customField.classList.add('active');
+                    } else {
+                        customField.style.display = 'none';
+                        customField.classList.remove('active');
+                    }
+                });
+            }
+
+            // Отправка формы
+            form.addEventListener('submit', async function(e) {
                 e.preventDefault();
+
+                // Валидация имени
                 const name = document.getElementById('fullname').value.trim();
                 if (!name) {
                     alert('Пожалуйста, укажите имя и фамилию');
                     return;
                 }
-                const attendance = document.querySelector('input[name="attendance"]:checked');
-                if (!attendance) {
-                    alert('Пожалуйста, укажите, сможете ли присутствовать');
-                    return;
-                }
-                const companions = document.getElementById('companions').value.trim();
-                const drinks = Array.from(document.querySelectorAll('input[name="drinks"]:checked')).map(cb => cb.value);
+
+                // Валидация поля "Свой вариант"
                 if (customCheckbox.checked) {
-                    const customVal = document.getElementById('customDrink').value.trim();
-                    if (customVal) drinks.push(customVal);
+                    const customVal = customInput.value.trim();
+                    if (!customVal) {
+                        alert('Пожалуйста, укажите свой вариант напитка');
+                        return;
+                    }
                 }
-                console.log({ name, attendance: attendance.value, companions, drinks });
-                alert('Спасибо! Ваш ответ сохранён.');
-                form.reset();
-                customField.classList.remove('active');
+
+                const submitBtn = form.querySelector('.submit-btn');
+                submitBtn.textContent = 'Отправляем...';
+                submitBtn.disabled = true;
+
+                const formData = new FormData(form);
+                if (customCheckbox.checked) {
+                    const customVal = customInput.value.trim();
+                    if (customVal) {
+                        formData.append('Свой напиток', customVal);
+                    }
+                }
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        form.style.display = 'none';
+                        soonMessage.style.display = 'block';
+                        soonMessage.textContent = 'Спасибо! Мы получили ваши ответы.';
+                    } else {
+                        throw new Error('Server error');
+                    }
+                } catch (error) {
+                    alert('Упс! Произошла ошибка при отправке. Попробуйте еще раз или напишите нам лично.');
+                    submitBtn.textContent = 'Отправить';
+                    submitBtn.disabled = false;
+                }
             });
         })();
     </script>
 </body>
 </html>
+
