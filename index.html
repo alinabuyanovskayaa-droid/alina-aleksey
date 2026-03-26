@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,7 +6,7 @@
     <title>Алексей & Алина | Свадебное приглашение</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
     <style>
         /* ===== Базовые сбросы ===== */
         * {
@@ -19,7 +18,7 @@
         body {
             background-color: #ffffff;
             color: #111111;
-            font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             font-weight: 400;
             line-height: 1.5;
             scroll-behavior: smooth;
@@ -46,15 +45,14 @@
             padding-top: 80px;
         }
 
-        /* Специфичные стили для текста в hero (белый цвет и тень) */
         .hero .names,
         .hero .hero-sub {
             color: #ffffff;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0px 0px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Общие стили для имён (используются только в hero) */
         .names {
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(2.2rem, 8vw, 4rem);
             font-weight: 400;
             letter-spacing: 0.02em;
@@ -147,6 +145,7 @@
         }
 
         .greeting-title {
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(2rem, 6vw, 3.2rem);
             font-weight: 400;
             color: #111111;
@@ -176,6 +175,7 @@
         }
 
         .month-year {
+            font-family: 'Cormorant Garamond', serif;
             font-size: 1.6rem;
             font-weight: 400;
             color: #111111;
@@ -194,7 +194,7 @@
             background: #fafafa;
             padding: 0.6rem 0;
             border-radius: 40px;
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Inter', sans-serif;
         }
 
         .calendar-days {
@@ -269,6 +269,7 @@
         }
 
         .location-card h3 {
+            font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
             font-weight: 400;
             margin-bottom: 1rem;
@@ -332,6 +333,7 @@
 
         .timeline-title {
             text-align: center;
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
             font-weight: 400;
             margin-bottom: 3rem;
@@ -450,6 +452,7 @@
         }
 
         .dresscode-title {
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
             font-weight: 400;
             color: #111111;
@@ -563,6 +566,7 @@
         }
 
         .wishes-title {
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
             font-weight: 400;
             color: #111111;
@@ -581,86 +585,6 @@
             margin-top: 0;
         }
 
-        /* ===== Контакты ===== */
-        .contacts-block {
-            background: #ffffff;
-            padding: clamp(3rem, 8vw, 5rem) 1.5rem;
-            border-bottom: 1px solid #eeeeee;
-            text-align: center;
-        }
-
-        .contacts-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .contacts-title {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 400;
-            letter-spacing: 0.1em;
-            color: #111111;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-
-        .contacts-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #666666;
-            margin-bottom: 2.5rem;
-            font-style: italic;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: clamp(1rem, 4vw, 3rem);
-            flex-wrap: wrap;
-        }
-
-        .contact-btn {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-width: 200px;
-            padding: 1.5rem;
-            border: 0.5px solid #cccccc;
-            text-decoration: none;
-            color: #111111;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            background: #ffffff;
-        }
-
-        .contact-btn:hover {
-            border-color: #111111;
-            background: #fafafa;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .btn-label {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 8px;
-            color: #888888;
-        }
-
-        .btn-name {
-            font-size: 1.4rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        @media (max-width: 480px) {
-            .contact-btn {
-                min-width: 100%;
-                padding: 1.2rem;
-            }
-        }
-
         /* ===== Присутствие (форма) ===== */
         .presence-block {
             background: #ffffff;
@@ -675,6 +599,7 @@
         }
 
         .presence-title {
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(1.8rem, 5vw, 2.5rem);
             font-weight: 400;
             color: #111111;
@@ -777,7 +702,103 @@
             font-weight: 500;
             color: #111;
             letter-spacing: 0.02em;
-            display: none; /* скрыто до отправки */
+            display: none;
+        }
+
+        /* ===== Контакты (после формы) ===== */
+        .contacts-block {
+            background: #ffffff;
+            padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+            border-bottom: 1px solid #eeeeee;
+            text-align: center;
+        }
+
+        .contacts-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contacts-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: #111111;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .contacts-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #666666;
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 4vw, 3rem);
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+            padding: 1.5rem;
+            border: 0.5px solid #cccccc;
+            text-decoration: none;
+            color: #111111;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: #ffffff;
+        }
+
+        .contact-btn:hover {
+            border-color: #111111;
+            background: #fafafa;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .btn-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            color: #888888;
+        }
+
+        .btn-name {
+            font-size: 1.4rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .telegram-icon {
+            width: 24px;
+            height: 24px;
+            stroke: #111111;
+            stroke-width: 1.2;
+            fill: none;
+            transition: stroke 0.2s;
+        }
+        .contact-btn:hover .telegram-icon {
+            stroke: #000000;
+        }
+
+        @media (max-width: 480px) {
+            .contact-btn {
+                min-width: 100%;
+                padding: 1.2rem;
+            }
         }
 
         /* ===== Анимации ===== */
@@ -866,7 +887,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-time">16:00</div>
-                    <div class="timeline-event">Свадебная церемония</div> <!-- исправлено "C" на "С" -->
+                    <div class="timeline-event">Свадебная церемония</div>
                 </div>
             </div>
             <div class="timeline-item">
@@ -881,7 +902,6 @@
                     <div class="timeline-event">Завершение вечера</div>
                 </div>
             </div>
-            <!-- лишний </div> удалён -->
         </div>
     </section>
 
@@ -928,28 +948,7 @@
         </div>
     </section>
 
-    <section class="contacts-block fade-up">
-        <div class="contacts-container">
-            <h2 class="contacts-title">КОНТАКТЫ</h2>
-            <div class="small-divider"></div>
-            <p class="contacts-text">
-                Если вы хотите подготовить для нас творческий подарок, 
-                сделать сюрприз или у вас просто остались вопросы — 
-                пожалуйста, напишите нам! Мы всегда на связи.
-            </p>
-            <div class="contact-buttons">
-                <a href="https://t.me/ник_жениха" target="_blank" class="contact-btn">
-                    <span class="btn-label">Жених</span>
-                    <span class="btn-name">Алексей</span>
-                </a>
-                <a href="https://t.me/smolskaya765" target="_blank" class="contact-btn">
-                    <span class="btn-label">Невеста</span>
-                    <span class="btn-name">Алина</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
+    <!-- Форма присутствия -->
     <section class="presence-block fade-up">
         <div class="presence-container">
             <h2 class="presence-title">ПРИСУТСТВИЕ</h2>
@@ -995,6 +994,43 @@
                 <button type="submit" class="submit-btn">Отправить</button>
             </form>
             <div class="soon-message" id="soonMessage">До скорой встречи!</div>
+        </div>
+    </section>
+
+    <!-- Блок контактов (после формы) -->
+    <section class="contacts-block fade-up">
+        <div class="contacts-container">
+            <h2 class="contacts-title">КОНТАКТЫ</h2>
+            <div class="small-divider"></div>
+            <p class="contacts-text">
+                Если вы хотите подготовить для нас творческий подарок, 
+                сделать сюрприз или у вас просто остались вопросы — 
+                пожалуйста, напишите нам! Мы всегда на связи.
+            </p>
+            <div class="contact-buttons">
+                <a href="https://t.me/ник_жениха" target="_blank" class="contact-btn">
+                    <span class="btn-label">Жених</span>
+                    <span class="btn-name">
+                        <svg class="telegram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.5 4.5L2 12.5L8.5 14.5L12.5 21L21.5 4.5Z" />
+                            <path d="M8.5 14.5L12.5 21L21.5 4.5L8.5 14.5Z" />
+                            <path d="M8.5 14.5L2 12.5L21.5 4.5L8.5 14.5Z" />
+                        </svg>
+                        Алексей
+                    </span>
+                </a>
+                <a href="https://t.me/smolskaya765" target="_blank" class="contact-btn">
+                    <span class="btn-label">Невеста</span>
+                    <span class="btn-name">
+                        <svg class="telegram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.5 4.5L2 12.5L8.5 14.5L12.5 21L21.5 4.5Z" />
+                            <path d="M8.5 14.5L12.5 21L21.5 4.5L8.5 14.5Z" />
+                            <path d="M8.5 14.5L2 12.5L21.5 4.5L8.5 14.5Z" />
+                        </svg>
+                        Алина
+                    </span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1107,10 +1143,8 @@
             const customField = document.getElementById('customDrinkField');
             const customInput = document.getElementById('customDrink');
 
-            // Скрываем сообщение до отправки
             soonMessage.style.display = 'none';
 
-            // Показать/скрыть поле "Свой вариант"
             if (customCheckbox) {
                 customCheckbox.addEventListener('change', function() {
                     if (this.checked) {
@@ -1123,18 +1157,15 @@
                 });
             }
 
-            // Отправка формы
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
-                // Валидация имени
                 const name = document.getElementById('fullname').value.trim();
                 if (!name) {
                     alert('Пожалуйста, укажите имя и фамилию');
                     return;
                 }
 
-                // Валидация поля "Свой вариант"
                 if (customCheckbox.checked) {
                     const customVal = customInput.value.trim();
                     if (!customVal) {
@@ -1179,4 +1210,3 @@
     </script>
 </body>
 </html>
-
