@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -105,13 +104,13 @@
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #111111; /* чёрный текст */
+            color: #111111;
         }
 
         .arrow-icon {
             width: 30px;
             height: 30px;
-            stroke: #111111; /* чёрная стрелка */
+            stroke: #111111;
             stroke-width: 1.6;
             fill: none;
         }
@@ -770,26 +769,33 @@
             font-weight: 500;
             letter-spacing: 1px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 4px;
         }
-
-        .telegram-icon {
-            width: 24px;
-            height: 24px;
-            stroke: #111111;
-            stroke-width: 1.2;
-            fill: none;
-            transition: stroke 0.2s;
+        
+        .btn-phone {
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            color: #666666;
+            margin-top: 2px;
         }
-        .contact-btn:hover .telegram-icon {
-            stroke: #000000;
+        
+        .contact-btn:hover .btn-phone {
+            color: #111111;
         }
 
         @media (max-width: 480px) {
             .contact-btn {
                 min-width: 100%;
                 padding: 1.2rem;
+            }
+            .btn-name {
+                font-size: 1.2rem;
+            }
+            .btn-phone {
+                font-size: 0.85rem;
             }
         }
 
@@ -989,37 +995,34 @@
         </div>
     </section>
 
-    <!-- Блок контактов (после формы) -->
+    <!-- Блок контактов: убраны иконки, добавлен организатор в едином стиле -->
     <section class="contacts-block fade-up">
         <div class="contacts-container">
             <h2 class="contacts-title">КОНТАКТЫ</h2>
             <div class="small-divider"></div>
             <p class="contacts-text">
-                Если вы хотите подготовить для нас творческий подарок, 
-                сделать сюрприз или у вас просто остались вопросы — 
-                пожалуйста, напишите нам! Мы всегда на связи.
+                В день свадьбы мы будем немного заняты, поэтому если Вы захотите
+                подготовить для нас сюрприз или у Вас появились какие-либо организационные вопросы,
+                Вам с радостью поможет наш организатор Диана.
             </p>
+            
             <div class="contact-buttons">
-                <a href="https://t.me/ник_жениха" target="_blank" class="contact-btn">
+                <!-- Жених (без иконки) -->
+                <a href="https://t.me/CHAPIHAPACKOL" target="_blank" class="contact-btn">
                     <span class="btn-label">Жених</span>
-                    <span class="btn-name">
-                        <svg class="telegram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21.5 4.5L2 12.5L8.5 14.5L12.5 21L21.5 4.5Z" />
-                            <path d="M8.5 14.5L12.5 21L21.5 4.5L8.5 14.5Z" />
-                            <path d="M8.5 14.5L2 12.5L21.5 4.5L8.5 14.5Z" />
-                        </svg>
-                        Алексей
-                    </span>
+                    <span class="btn-name">Алексей</span>
                 </a>
+                <!-- Невеста (без иконки) -->
                 <a href="https://t.me/smolskaya765" target="_blank" class="contact-btn">
                     <span class="btn-label">Невеста</span>
+                    <span class="btn-name">Алина</span>
+                </a>
+                <!-- Организатор Диана (телефон) -->
+                <a href="tel:+375445469533" class="contact-btn">
+                    <span class="btn-label">Организатор</span>
                     <span class="btn-name">
-                        <svg class="telegram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21.5 4.5L2 12.5L8.5 14.5L12.5 21L21.5 4.5Z" />
-                            <path d="M8.5 14.5L12.5 21L21.5 4.5L8.5 14.5Z" />
-                            <path d="M8.5 14.5L2 12.5L21.5 4.5L8.5 14.5Z" />
-                        </svg>
-                        Алина
+                        Диана
+                        <span class="btn-phone">+375 44 546-95-33</span>
                     </span>
                 </a>
             </div>
