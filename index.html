@@ -155,7 +155,7 @@
         .greeting-text {
             font-size: 1rem;
             line-height: 1.6;
-            color: #333333;
+            color: #111111;
             max-width: 680px;
             margin: 0 auto 2rem auto;
         }
@@ -188,7 +188,7 @@
             text-align: center;
             font-weight: 500;
             font-size: 0.8rem;
-            color: #555555;
+            color: #111111;
             background: #fafafa;
             padding: 0.6rem 0;
             border-radius: 40px;
@@ -276,7 +276,7 @@
         .location-address {
             font-size: 1.1rem;
             line-height: 1.6;
-            color: #333;
+            color: #111111;
             margin: 1rem 0;
         }
 
@@ -389,7 +389,7 @@
 
         .timeline-event {
             font-size: 1.1rem;
-            color: #555555;
+            color: #111111;
             line-height: 1.4;
         }
 
@@ -456,7 +456,7 @@
 
         .dresscode-description {
             font-size: 1rem;
-            color: #333333;
+            color: #111111;
             max-width: 700px;
             margin: 0 auto 1.5rem;
             line-height: 1.6;
@@ -570,9 +570,9 @@
         .wishes-text {
             font-size: 1.1rem;
             line-height: 1.6;
-            color: #333333;
+            color: #111111;
             margin-top: 1.5rem;
-            font-style: italic;
+            font-style: normal;
         }
 
         .wishes-text:first-of-type {
@@ -601,7 +601,7 @@
 
         .presence-sub {
             font-size: 1rem;
-            color: #555;
+            color: #111111;
             margin-bottom: 2rem;
         }
 
@@ -615,7 +615,7 @@
             font-weight: 500;
             margin-bottom: 0.5rem;
             font-size: 1rem;
-            color: #111;
+            color: #111111;
         }
 
         .form-group input[type="text"],
@@ -630,6 +630,7 @@
             border-radius: 12px;
             background: #fff;
             transition: border 0.2s;
+            color: #111111;
         }
 
         .form-group input:focus,
@@ -655,6 +656,7 @@
             font-weight: normal;
             margin-bottom: 0;
             cursor: pointer;
+            color: #111111;
         }
 
         .radio-group input,
@@ -693,7 +695,7 @@
             margin-top: 2rem;
             font-size: 1.2rem;
             font-weight: 500;
-            color: #111;
+            color: #111111;
             letter-spacing: 0.02em;
             display: none;
         }
@@ -724,7 +726,7 @@
         .young-couple-text {
             font-size: 1.05rem;
             line-height: 1.6;
-            color: #333333;
+            color: #111111;
             margin-bottom: 1.2rem;
             font-style: normal;
             font-weight: 500;
@@ -734,7 +736,7 @@
         .contacts-text {
             font-size: 1.05rem;
             line-height: 1.7;
-            color: #666666;
+            color: #111111;
             margin-bottom: 2rem;
             font-style: normal;
         }
@@ -790,7 +792,7 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 8px;
-            color: #888888;
+            color: #111111;
         }
 
         .btn-name {
@@ -798,21 +800,39 @@
             font-weight: 500;
             letter-spacing: 1px;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 4px;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            color: #111111;
         }
         
         .btn-phone {
             font-size: 0.85rem;
             font-weight: 400;
             letter-spacing: 0.5px;
-            color: #666666;
+            color: #111111;
             margin-top: 2px;
         }
         
         .contact-btn:hover .btn-phone {
             color: #111111;
+        }
+
+        /* стиль для иконки телеграма (черно-белая) */
+        .tg-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            background: currentColor;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.66-.35-1.02.22-1.61.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.13-.05-.18-.06-.05-.16-.03-.23-.01-.1.02-1.7 1.08-4.79 3.17-.45.31-.86.46-1.23.45-.4-.01-1.18-.23-1.76-.42-.7-.23-1.26-.35-1.21-.74.03-.2.3-.41.84-.63 3.28-1.43 5.47-2.37 6.56-2.83 3.12-1.31 3.77-1.54 4.19-1.55.09 0 .3.02.44.13.11.09.14.21.15.33-.01.06 0 .18-.01.3z'/%3E%3C/svg%3E") no-repeat center;
+            mask-size: contain;
+            background-color: #111111;
+            transition: background-color 0.2s;
+        }
+        .contact-btn:hover .tg-icon {
+            background-color: #111111;
         }
 
         @media (max-width: 640px) {
@@ -825,8 +845,6 @@
                 max-width: 100%;
                 flex: 1 1 40%;
             }
-            /* на очень узких экранах кнопки всё равно остаются в строке за счет flex-wrap: wrap, 
-               но мы хотим именно две кнопки в ряд, не в колонку */
             .couple-buttons {
                 flex-wrap: wrap;
             }
@@ -836,6 +854,10 @@
             }
             .organizer-wrapper .contact-btn {
                 max-width: 100%;
+            }
+            .tg-icon {
+                width: 18px;
+                height: 18px;
             }
         }
 
@@ -852,6 +874,10 @@
             .btn-label {
                 font-size: 0.6rem;
                 letter-spacing: 2px;
+            }
+            .tg-icon {
+                width: 16px;
+                height: 16px;
             }
         }
 
@@ -872,7 +898,7 @@
             text-align: center;
             padding: 2rem;
             font-size: 0.75rem;
-            color: #777777;
+            color: #111111;
             border-top: 1px solid #eeeeee;
         }
     </style>
@@ -1052,38 +1078,40 @@
         </div>
     </section>
 
-    <!-- Блок контактов: убран эмодзи телефона, убран курсив у текста организатора -->
+    <!-- Блок контактов: добавлены значки Telegram (черно-белые) -->
     <section class="contacts-block fade-up">
         <div class="contacts-container">
             <h2 class="contacts-title">КОНТАКТЫ</h2>
             <div class="small-divider"></div>
             
-            <!-- Текст, относящийся к связи с молодыми (без значка телефона) -->
             <p class="young-couple-text">
                 По любым вопросам, предложениям или просто чтобы разделить радость — смело пишите нам, жениху и невесте. 
                 Мы на связи и будем рады ответить!
             </p>
             
-            <!-- Кнопки жених и невеста — всегда в одной строке (адаптивно) -->
             <div class="couple-buttons">
                 <a href="https://t.me/CHAPIHAPACKOL" target="_blank" class="contact-btn">
                     <span class="btn-label">Жених</span>
-                    <span class="btn-name">Алексей</span>
+                    <span class="btn-name">
+                        <span class="tg-icon"></span>
+                        Алексей
+                    </span>
                 </a>
                 <a href="https://t.me/smolskaya765" target="_blank" class="contact-btn">
                     <span class="btn-label">Невеста</span>
-                    <span class="btn-name">Алина</span>
+                    <span class="btn-name">
+                        <span class="tg-icon"></span>
+                        Алина
+                    </span>
                 </a>
             </div>
             
-            <!-- Текст про сюрприз к организатору (теперь без курсива) -->
             <p class="contacts-text">
                 В день свадьбы мы будем немного заняты, поэтому если Вы захотите
                 подготовить для нас сюрприз или у Вас появились какие-либо организационные вопросы,
                 Вам с радостью поможет наш организатор Диана.
             </p>
             
-            <!-- Контакты организатора (телефон) -->
             <div class="organizer-wrapper">
                 <a href="tel:+375445469533" class="contact-btn">
                     <span class="btn-label">Организатор</span>
