@@ -698,7 +698,7 @@
             display: none;
         }
 
-        /* ===== Контакты (после формы) ===== */
+        /* ===== Контакты: обновленная версия ===== */
         .contacts-block {
             background: #ffffff;
             padding: clamp(3rem, 8vw, 5rem) 1.5rem;
@@ -707,7 +707,7 @@
         }
 
         .contacts-container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -720,19 +720,37 @@
             text-transform: uppercase;
         }
 
+        /* текст про связь с молодыми (без эмодзи, обычный стиль) */
+        .young-couple-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #333333;
+            margin-bottom: 1.2rem;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* текст организатора — теперь без курсива, как и текст молодых */
         .contacts-text {
             font-size: 1.05rem;
             line-height: 1.7;
             color: #666666;
-            margin-bottom: 2.5rem;
-            font-style: italic;
+            margin-bottom: 2rem;
+            font-style: normal;
         }
 
-        .contact-buttons {
+        /* новая сетка для кнопок: жених+невеста в строке, организатор снизу на мобильных */
+        .couple-buttons {
             display: flex;
             justify-content: center;
-            gap: clamp(1rem, 4vw, 3rem);
-            flex-wrap: wrap;
+            gap: 1.5rem;
+            flex-wrap: nowrap;
+            margin-bottom: 1.8rem;
+        }
+
+        .organizer-wrapper {
+            display: flex;
+            justify-content: center;
         }
 
         .contact-btn {
@@ -740,13 +758,24 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-width: 200px;
-            padding: 1.5rem;
+            min-width: 180px;
+            padding: 1.2rem 1rem;
             border: 0.5px solid #cccccc;
             text-decoration: none;
             color: #111111;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             background: #ffffff;
+            flex: 1;
+        }
+
+        .couple-buttons .contact-btn {
+            flex: 1;
+            max-width: 220px;
+        }
+
+        .organizer-wrapper .contact-btn {
+            max-width: 280px;
+            width: 100%;
         }
 
         .contact-btn:hover {
@@ -765,7 +794,7 @@
         }
 
         .btn-name {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 500;
             letter-spacing: 1px;
             display: flex;
@@ -775,7 +804,7 @@
         }
         
         .btn-phone {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 400;
             letter-spacing: 0.5px;
             color: #666666;
@@ -786,16 +815,43 @@
             color: #111111;
         }
 
+        @media (max-width: 640px) {
+            .couple-buttons {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            .couple-buttons .contact-btn {
+                min-width: 160px;
+                max-width: 100%;
+                flex: 1 1 40%;
+            }
+            /* на очень узких экранах кнопки всё равно остаются в строке за счет flex-wrap: wrap, 
+               но мы хотим именно две кнопки в ряд, не в колонку */
+            .couple-buttons {
+                flex-wrap: wrap;
+            }
+            .couple-buttons .contact-btn {
+                flex: 1 1 calc(50% - 1rem);
+                min-width: 130px;
+            }
+            .organizer-wrapper .contact-btn {
+                max-width: 100%;
+            }
+        }
+
         @media (max-width: 480px) {
-            .contact-btn {
-                min-width: 100%;
-                padding: 1.2rem;
+            .couple-buttons .contact-btn {
+                padding: 1rem 0.5rem;
             }
             .btn-name {
                 font-size: 1.2rem;
             }
             .btn-phone {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
+            }
+            .btn-label {
+                font-size: 0.6rem;
+                letter-spacing: 2px;
             }
         }
 
@@ -860,7 +916,8 @@
                 <div class="small-divider"></div>
                 <div class="location-address">
                     «Zlata Villa»<br>
-                    Минская область, Логойский район, д.Силичи<br>
+                    Минская область, Логойский район<br>
+                    д.Силичи, ул.Полевая ,5<br>
                 </div>
                 <div class="location-image">
                     <img src="image.png" alt="Здание ресторана">
@@ -953,7 +1010,7 @@
             <div class="small-divider"></div>
             <p class="presence-sub">Пожалуйста, ответьте на несколько вопросов, это поможет нам в организации торжества.</p>
             
-            <form id="presenceForm" action="https://formspree.io/f/xaqlyaow" method="POST">
+            <form id="presenceForm" action="https://formspree.io/f/xzdkdjjr" method="POST">
                 <div class="form-group">
                     <label for="fullname">Фамилия и имя *</label>
                     <input type="text" id="fullname" name="fullname" required placeholder="Иванова Анна">
@@ -995,29 +1052,39 @@
         </div>
     </section>
 
-    <!-- Блок контактов: убраны иконки, добавлен организатор в едином стиле -->
+    <!-- Блок контактов: убран эмодзи телефона, убран курсив у текста организатора -->
     <section class="contacts-block fade-up">
         <div class="contacts-container">
             <h2 class="contacts-title">КОНТАКТЫ</h2>
             <div class="small-divider"></div>
+            
+            <!-- Текст, относящийся к связи с молодыми (без значка телефона) -->
+            <p class="young-couple-text">
+                По любым вопросам, предложениям или просто чтобы разделить радость — смело пишите нам, жениху и невесте. 
+                Мы на связи и будем рады ответить!
+            </p>
+            
+            <!-- Кнопки жених и невеста — всегда в одной строке (адаптивно) -->
+            <div class="couple-buttons">
+                <a href="https://t.me/CHAPIHAPACKOL" target="_blank" class="contact-btn">
+                    <span class="btn-label">Жених</span>
+                    <span class="btn-name">Алексей</span>
+                </a>
+                <a href="https://t.me/smolskaya765" target="_blank" class="contact-btn">
+                    <span class="btn-label">Невеста</span>
+                    <span class="btn-name">Алина</span>
+                </a>
+            </div>
+            
+            <!-- Текст про сюрприз к организатору (теперь без курсива) -->
             <p class="contacts-text">
                 В день свадьбы мы будем немного заняты, поэтому если Вы захотите
                 подготовить для нас сюрприз или у Вас появились какие-либо организационные вопросы,
                 Вам с радостью поможет наш организатор Диана.
             </p>
             
-            <div class="contact-buttons">
-                <!-- Жених (без иконки) -->
-                <a href="https://t.me/CHAPIHAPACKOL" target="_blank" class="contact-btn">
-                    <span class="btn-label">Жених</span>
-                    <span class="btn-name">Алексей</span>
-                </a>
-                <!-- Невеста (без иконки) -->
-                <a href="https://t.me/smolskaya765" target="_blank" class="contact-btn">
-                    <span class="btn-label">Невеста</span>
-                    <span class="btn-name">Алина</span>
-                </a>
-                <!-- Организатор Диана (телефон) -->
+            <!-- Контакты организатора (телефон) -->
+            <div class="organizer-wrapper">
                 <a href="tel:+375445469533" class="contact-btn">
                     <span class="btn-label">Организатор</span>
                     <span class="btn-name">
